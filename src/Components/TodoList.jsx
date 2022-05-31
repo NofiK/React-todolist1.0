@@ -19,6 +19,9 @@ const TodoList = () => {
         id: "c3a755cb-8dc6-4fc0-a9d2-6cf0d3176245" ,
         text: "Dinner with friend"
     }]);
+     function removeGoal(post){
+      setMockedTodoItems(mockedTodoItems.filter(p=> p.id !== post.id))
+     }
 
     function createGoal(newText){
         setMockedTodoItems([...mockedTodoItems, newText])
@@ -28,7 +31,7 @@ const TodoList = () => {
       <div>
         <AddTodoItem create={createGoal}/>
         {mockedTodoItems.map(text=>
-        <TodoItem post={text} key={text.id}/>
+        <TodoItem remove={removeGoal} post={text} key={text.id}/>
       )}
       </div>
    

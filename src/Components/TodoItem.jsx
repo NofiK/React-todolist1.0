@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import deleteIcon from "./deleteIcon.png";
+import { MdDelete } from 'react-icons/md';
+
+
 const TodoItem = (props) => {
 
   const [checked,setChecked] = useState(false);
@@ -13,12 +15,10 @@ const TodoItem = (props) => {
   return (
     <div className='todoListItems'>
      <div className='checkboxDiv'>
-
-       <input className='checkbox' onClick={isChecked} type="checkbox"></input>
-       <p className={style}>{props.post.text}</p>
-
+       <input id='checkbox_id' className='checkbox' onClick={isChecked} type="checkbox"></input>
+       <label for='checkbox_id' className={style}>{props.post.text}</label>
      </div>
-     <img className='deleteIcon' src={deleteIcon}/>
+     <MdDelete onClick={()=>props.remove(props.post)} className='deleteIcon'/>
     </div>
   )
 }

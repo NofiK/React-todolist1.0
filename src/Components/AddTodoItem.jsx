@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Input from './Input'
+import { BiPlusMedical } from 'react-icons/bi';
 const AddTodoItem = ({create}) => {
  const [text, setText] = useState("")
  
@@ -25,7 +26,7 @@ const AddTodoItem = ({create}) => {
          onChange={e=> setText(e.target.value)}
          placeholder={"Type an item"}
          />
-        <button onClick={addNewItem} className='addBtn'>➕</button>
+        <BiPlusMedical onClick={addNewItem} className='addIcon'/>
     </div>
   )
 }
