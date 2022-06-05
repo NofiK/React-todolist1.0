@@ -16,9 +16,9 @@ const TodoItem = (props) => {
     <div className='todoListItems'>
      <div className='checkboxDiv'>
        <input id='checkbox_id' className='checkbox' onClick={isChecked} type="checkbox"></input>
-       <label for='checkbox_id' className={style}>{props.post.text}</label>
+       <label className={style}>{props.post.text}</label>
      </div>
-     <MdDelete onClick={()=>props.remove(props.post)} className='deleteIcon'/>
+     <MdDelete  onClick={()=>props.remove(props.post)} className='deleteIcon'/>
     </div>
   )
 }

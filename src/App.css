@@ -4,9 +4,8 @@
 }
 
 .App {
-    width: 50%;
+    width: 60%;
     margin: auto;
-    height: 700px;
 }
 
 .headerComp {
@@ -35,7 +34,8 @@
 
 .currentDate {
     color: rgb(76, 76, 76);
-    font-weight: bold
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .dateDiv {
@@ -45,18 +45,20 @@
 }
 
 h1 {
-    font-size: 45px;
-}
-
-h1,
-h2 {
+    font-size: 65px;
     color: #040238;
     font-family: 'Roboto', sans-serif;
 }
 
+h2 {
+    color: #040238;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+}
+
 .deleteIcon {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     color: rgb(255, 0, 72);
 }
 
@@ -71,12 +73,12 @@ input[type=checkbox] {
 input[type=checkbox]:before {
     font-family: "FontAwesome";
     content: "\f00c";
-    font-size: 15px;
+    font-size: 20px;
     color: transparent !important;
     background: #ffffff;
     display: block;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     margin-right: 7px;
     box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.2);
 }
@@ -88,15 +90,16 @@ input[type=checkbox]:checked:before {
 
 .addInput {
     width: 80%;
-    height: 25px;
+    height: 30px;
     box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.2);
     border: 0;
     background-color: #fff;
     padding-left: 20px;
+    font-size: 20px;
 }
 
 .addIcon {
-    font-size: 25px;
+    font-size: 35px;
     border: 0;
 }
 
@@ -105,7 +108,7 @@ input[type=checkbox]:checked:before {
 
 .crossed {
     margin-left: 10px;
-    font-size: 16px;
+    font-size: 22px;
     display: inline-block;
     text-decoration: line-through;
     text-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.2);
@@ -113,7 +116,103 @@ input[type=checkbox]:checked:before {
 
 .noCrossed {
     margin-left: 10px;
-    font-size: 16px;
+    font-size: 22px;
     display: inline-block;
     text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 230px) and (max-width:355px) {
+    .crossed {
+        font-size: 18px;
+    }
+    .noCrossed {
+        font-size: 18px;
+    }
+    .App {
+        width: 95%;
+        margin: auto;
+    }
+    .todoListItems {
+        margin: 25px auto;
+        width: 95%;
+        flex-wrap: wrap;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .currentDate {
+        font-size: 15px;
+    }
+    .addSection {
+        width: 90%;
+    }
+    .addIcon {
+        font-size: 27px;
+        border: 0;
+        margin-left: 30px;
+    }
+    .addInput {
+        width: 60%;
+        height: 25px;
+        box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.2);
+        border: 0;
+        background-color: #fff;
+        padding-left: 20px;
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 355px) and (max-width:500px) {
+    .App {
+        width: 95%;
+        margin: auto;
+    }
+    .todoListItems {
+        margin: 25px auto;
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .addSection {
+        width: 90%;
+    }
+    .addIcon {
+        font-size: 40px;
+        border: 0;
+        margin-left: 50px;
+    }
+}
+
+@media (min-width: 500px) and (max-width:1000px) {
+    .App {
+        width: 95%;
+        margin: auto;
+    }
+    .todoListItems {
+        margin: 25px auto;
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    .addSection {
+        width: 90%;
+    }
+    .addIcon {
+        font-size: 40px;
+        border: 0;
+        margin-left: 50px;
+    }
 }

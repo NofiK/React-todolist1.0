@@ -26,7 +26,7 @@ const AddTodoItem = ({create}) => {
          onChange={e=> setText(e.target.value)}
          placeholder={"Type an item"}
          />
-        <BiPlusMedical onClick={addNewItem} className='addIcon'/>
+        <BiPlusMedical  onClick={addNewItem} className='addIcon'/>
     </div>
   )
 }

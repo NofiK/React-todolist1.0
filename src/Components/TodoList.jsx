@@ -31,8 +31,7 @@ const TodoList = () => {
       <div>
         <AddTodoItem create={createGoal}/>
         {mockedTodoItems.map(text=>
-        <TodoItem remove={removeGoal} post={text} key={text.id}/>
-      )}
+        <TodoItem remove={removeGoal} post={text} key={text.id}/>)}
       </div>
    
   )
